@@ -51,10 +51,16 @@ body {
     margin: 5px 20px;
     display: flex;
     flex-direction: row;
+    
 }
 .info p {
-    font-size: 1.1rem;
+    font-size: 18px;
+    padding: 10px 20px;
+}
+.info img {
+    border: #87986a 2px solid;
+    border-radius: 20px;
 }
 .recicla {
-   width: 33%;
+   width: 34%;
 }

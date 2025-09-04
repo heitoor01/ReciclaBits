@@ -17,9 +17,11 @@ body {
    top: 50%;
    left: 50%;
    transform: translate(-50%, -50%);
-   width: 30rem;
+   width: 35rem;
    height: 3rem;
-    
+   border-radius: 50px;
+   border: none;
+   padding: 15px;
 }
 .apresentacao {
     height: 10rem;
@@ -32,13 +34,27 @@ body {
 .titulo {
     margin: 0;
     font-size: 2rem;
-    
+    font-weight: 500;
+    color: #fff;
     
 }
-
-
+.hero {
+   overflow: hidden;
+   height: 500px;
+}
 .hero img{
-    width: 100%;
-    opacity: 50%;
-
+    min-width: 100%;
+    margin-top: -100px;
+    
+}
+.info {
+    margin: 5px 20px;
+    display: flex;
+    flex-direction: row;
+}
+.info p {
+    font-size: 1.1rem;
+}
+.recicla {
+   width: 33%;
 }

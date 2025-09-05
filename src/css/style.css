@@ -5,6 +5,12 @@
 header {
  background-color: #87986a;
 }
+.nav-item{
+    font-size: 18px;
+}
+.nav_link:hover{
+    color: #87986a;
+}
 .logo {
     width:10vh ;
 }
@@ -58,7 +64,7 @@ body {
     padding: 10px 20px;
 }
 .info img {
-    border: #87986a 2px solid;
+    border: #87986a 4px solid;
     border-radius: 20px;
 }
 .recicla {

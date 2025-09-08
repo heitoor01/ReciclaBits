@@ -153,6 +153,7 @@
     @media (max-width: 576px) {
       .apresentacao { inset: auto 0 34%; }
       .search-field { border-radius: 14px; }
+      .logo { width: 90px; }
     }
 
     /* REDUÇÃO DE MOVIMENTO (acessibilidade) */

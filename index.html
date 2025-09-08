@@ -2,99 +2,138 @@
 <html lang="pt-br">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>ReciclaBits</title>
-    <link rel="stylesheet" href="src/css/style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>ReciclaBits</title>
+  <link rel="stylesheet" href="src/css/style.css">
 
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous">
+  <!-- Bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
 
-    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
-
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-        crossorigin="anonymous"></script>
+  <!-- Google Icons (lupa) -->
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 
 </head>
 
 <body>
-    <header>
-        <nav class="navbar navbar-expand-lg bg-body-tertiary">
-            <div class="container-fluid">
-                <img src="src/img/logo.png"  alt="logo" class="logo">
-                <a class="navbar-brand" href="#">ReciclaBits</a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                    aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="navbarNav">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active" aria-current="page" href="#">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Mapa</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="#">Contato</a>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <div class="banner">
-            <div class="apresentacao">
-                    <p class="titulo">EMPRESA CRIADA COM A IDEIA DE CONECTAR EMPRESA E COMUNIDADE EM BUSCA DE UMA CIDADE MAIS SUSTENTAVEL</p>
-                </div>
-            <div class="hero">
-                <img src="src/img/lixinho.jpg" alt="hero">
-                <div class="search-field">
-                    <input id="search-bar" class="search-bar" type="text" placeholder="Procure por pontos de coleta">
-                    <i class="fas fa-search ssp-busca-avancada__input-search-icon icon-busca-fixa" style="left: 20px; font-size: 20px;" id="lupa-busca" aria-hidden="true"></i>
-                </div>
-            </div>
+  <!-- HEADER / NAV -->
+  <header>
+    <nav class="navbar navbar-expand-lg bg-body-tertiary">
+      <div class="container">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="#">
+          <img src="src/img/logo.png" alt="logo" class="logo" />
+          <span>ReciclaBits</span>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alternar navegação">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarNav">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="#mapa">Mapa</a></li>
+            <li class="nav-item"><a class="nav-link" href="#contato">Contato</a></li>
+          </ul>
         </div>
-        <!-- Text area -->
-        <div class="info">
-            <div class="recicla">
-                <img src="/src/img/higor.jpg" alt="">
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum optio odit, eaque doloremque asperiores amet enim quisquam nulla iusto minima, assumenda consequatur debitis dolore magnam. Accusantium fugit reiciendis adipisci expedita culpa dolore ipsum deleniti nesciunt, amet cum, dolor facilis voluptas similique ducimus totam fuga voluptatibus vero, commodi qui? Aperiam animi aut illum. Aut sit vitae aliquam illum nam quos minus ut reiciendis quasi consectetur numquam corrupti in neque, eveniet dicta quisquam quam, eum optio at delectus voluptate sed temporibus. Eligendi possimus fugiat nesciunt, id, repellat laborum harum asperiores totam velit repudiandae sed vero consectetur fuga libero voluptas atque eveniet temporibus.
-                </p>
-            </div>
-            <div class="recicla">
-                <img src="/src/img/higor.jpg" alt="">
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum optio odit, eaque doloremque asperiores amet enim quisquam nulla iusto minima, assumenda consequatur debitis dolore magnam. Accusantium fugit reiciendis adipisci expedita culpa dolore ipsum deleniti nesciunt, amet cum, dolor facilis voluptas similique ducimus totam fuga voluptatibus vero, commodi qui? Aperiam animi aut illum. Aut sit vitae aliquam illum nam quos minus ut reiciendis quasi consectetur numquam corrupti in neque, eveniet dicta quisquam quam, eum optio at delectus voluptate sed temporibus. Eligendi possimus fugiat nesciunt, id, repellat laborum harum asperiores totam velit repudiandae sed vero consectetur fuga libero voluptas atque eveniet temporibus.
-                </p>
-            </div>
-            <div class="recicla">
-                <img src="/src/img/higor.jpg" alt="">
-                <p>
-                    Lorem ipsum dolor sit, amet consectetur adipisicing elit. Harum optio odit, eaque doloremque asperiores amet enim quisquam nulla iusto minima, assumenda consequatur debitis dolore magnam. Accusantium fugit reiciendis adipisci expedita culpa dolore ipsum deleniti nesciunt, amet cum, dolor facilis voluptas similique ducimus totam fuga voluptatibus vero, commodi qui? Aperiam animi aut illum. Aut sit vitae aliquam illum nam quos minus ut reiciendis quasi consectetur numquam corrupti in neque, eveniet dicta quisquam quam, eum optio at delectus voluptate sed temporibus. Eligendi possimus fugiat nesciunt, id, repellat laborum harum asperiores totam velit repudiandae sed vero consectetur fuga libero voluptas atque eveniet temporibus.
-                </p>
-            </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <!-- BANNER / HERO -->
+    <section class="banner">
+      <div class="hero">
+        <img src="src/img/lixinho.jpg" alt="Lixeira e reciclagem" />
+        <div class="apresentacao">
+          <p class="titulo">EMPRESA CRIADA COM A IDEIA DE CONECTAR EMPRESA E COMUNIDADE EM BUSCA DE UMA CIDADE MAIS SUSTENTÁVEL</p>
         </div>
-        
-    </main>
-    <footer>
-        <div class="sobre">
+        <div class="search-field">
+          <span class="material-symbols-outlined search-icon">search</span>
+          <input id="search-bar" class="search-bar" type="text" placeholder="Procure por pontos de coleta" />
+        </div>
+      </div>
+    </section>
+
+    <!-- INFO / CARDS -->
+    <section id="info" class="info">
+      <div class="container">
+        <div class="row g-4">
+          <!-- Card 1 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card recicla-card h-100">
+              <img class="recicla-img" src="/src/img/higor.jpg" alt="Equipe ReciclaBits" />
+              <div class="card-body">
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Harum optio odit, eaque doloremque asperiores amet enim quisquam nulla iusto minima, assumenda consequatur debitis dolore magnam. Lorem, ipsum dolor sit amet consectetur adipisicing elit. Amet quas perferendis necessitatibus. Voluptatum assumenda aperiam debitis beatae iure, tenetur animi nesciunt sint possimus harum delectus, laboriosam voluptatibus deserunt sed quia.
+                </p>
+              </div>
+            </article>
+          </div>
+          <!-- Card 2 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card recicla-card h-100">
+              <img class="recicla-img" src="/src/img/higor.jpg" alt="Coleta seletiva" />
+              <div class="card-body">
+                <p>
+                  Accusantium fugit reiciendis adipisci expedita culpa dolore ipsum deleniti nesciunt, amet cum, dolor facilis voluptas similique ducimus totam fuga voluptatibus vero. Lorem ipsum dolor sit amet consectetur adipisicing elit. Dicta nobis sint voluptatibus accusamus pariatur doloremque dolorum, obcaecati, aspernatur illo dolor sequi dolorem unde deleniti tempora velit tempore expedita blanditiis laudantium.
+                </p>
+              </div>
+            </article>
+          </div>
+          <!-- Card 3 -->
+          <div class="col-12 col-md-6 col-lg-4">
+            <article class="card recicla-card h-100">
+              <img class="recicla-img" src="/src/img/higor.jpg" alt="Educação ambiental" />
+              <div class="card-body">
+                <p>
+                  Aperiam animi aut illum. Aut sit vitae aliquam illum nam quos minus ut reiciendis quasi consectetur numquam corrupti in neque, eveniet dicta. Lorem ipsum dolor sit amet consectetur adipisicing elit. A nulla voluptates doloribus excepturi, qui amet dolorem aperiam rerum sequi dolorum voluptatem delectus, dolor praesentium ut id exercitationem veritatis consequuntur deserunt.
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <!-- FOOTER -->
+  <footer id="contato">
+    <div class="container">
+      <div class="row gy-4 align-items-center">
+        <div class="col-12 col-md-4">
+          <div class="d-flex flex-column gap-1">
             <strong>Sobre nós</strong>
             <a href="#">Quem somos</a>
+          </div>
         </div>
-        <div class="copy">
-            <p>Copyright © 2025. Todos os direitos reservados</p>
+        <div class="col-12 col-md-4 text-md-center copy">
+          <p>Copyright © 2025. Todos os direitos reservados</p>
         </div>
-        <div class="contato">
+        <div class="col-12 col-md-4 text-md-end">
+          <div class="d-flex flex-column gap-1">
             <strong>Contate-nos</strong>
-            <a href="mailto:example@example.com">reciclabits@gmail.com</a>
+            <a href="mailto:reciclabits@gmail.com">reciclabits@gmail.com</a>
+          </div>
         </div>
-        
-    </footer>
+      </div>
+    </div>
+  </footer>
+
+  <!-- Bootstrap JS -->
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+  <!-- Seu script (opcional) -->
+  <script>
+    // Exemplo simples: Enter no campo de busca
+    const searchInput = document.getElementById('search-bar');
+    if (searchInput) {
+      searchInput.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter') {
+          // Troque por sua lógica de busca / navegação
+          alert(`Buscando por: ${searchInput.value.trim() || 'todos os pontos'}`);
+        }
+      });
+    }
+  </script>
 </body>
-<script src="src/js/script.js"></script>
 
 </html>

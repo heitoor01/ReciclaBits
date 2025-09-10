@@ -67,6 +67,7 @@
       text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
       font-size: clamp(1rem, 2.5vw, 1.5rem);
       letter-spacing: .5px;
+      width: 70%;
     }
 
     /* SEARCH */

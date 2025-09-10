@@ -1,0 +1,13 @@
+body {
+    height: 100vh;
+}
+
+.map {
+   display: flex;
+   align-items: center;
+   justify-content: center; 
+   height: 100%;
+}
+.map iframe {
+    height: 90%;
+}

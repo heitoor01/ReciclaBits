@@ -5,9 +5,10 @@
     --brand: #2e7d32;
     /* verde reciclável vibe */
     --brand-2: #a5d6a7;
+    --brand-3: #f5faeb;
     --card: #ffffff;
     --radius: 16px;
-    --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+    --shadow: 0 8px 14px rgba(0, 0, 0, 0.08);
 }
 
 html,
@@ -16,7 +17,7 @@ body {
     background: var(--bg);
     color: var(--text);
     scroll-behavior: smooth;
-    background: #f5faeb;
+    background: var(--brand-3);
     margin: 0;
     font-family: system-ui, sans-serif;
 
@@ -38,12 +39,16 @@ body {
     letter-spacing: 0.4px;
 }
 
+.hero {
+    position: relative;
+  }
+
 .map {
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-    background: var(--brand-2);
+    background: var(--brand-3);
 }
 
 
@@ -53,7 +58,7 @@ body {
     aspect-ratio: 16 / 9;
     border: 0;
     border-radius: 12px;
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.08);;
 }
 
 footer {

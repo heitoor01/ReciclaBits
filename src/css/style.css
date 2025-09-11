@@ -4,6 +4,7 @@
       --muted: #6b7280;
       --brand: #2e7d32; /* verde reciclável vibe */
       --brand-2: #a5d6a7;
+      --brand-3: #f5faeb;
       --card: #ffffff;
       --radius: 16px;
       --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
@@ -14,7 +15,7 @@
       background: var(--bg);
       color: var(--text);
       scroll-behavior: smooth;
-      background: #f5faeb;
+      background: var(--brand-3);
     }
 
     /* NAV */

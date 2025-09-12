@@ -42,6 +42,11 @@
 
     /* CARDS */
 
+    .cardzin:hover {
+        cursor: pointer;
+        transform: scale(1.05);
+        transition: 0.2s ease-in-out;
+    }
     .faq-card {
       height: 100%;
       max-width: 80%;
@@ -52,6 +57,7 @@
       background: var(--card);
       display: flex;
       align-items: center;
+      padding: 20px;
     }
 
     .faq-card a {
@@ -62,7 +68,6 @@
     .faq-card img {
         height: clamp(50px, 8vh, 50px);
         width: clamp(50px, 8vw, 50px);
-        margin-top: -20px;
     }
 
     /* FOOTER */

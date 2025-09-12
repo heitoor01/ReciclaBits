@@ -34,15 +34,35 @@
       letter-spacing: 0.4px;
     }
 
+    .info {
+        min-height: 70vh;
+        display: flex;
+        align-items: center;
+    }
+
     /* CARDS */
 
-    .login-card {
+    .faq-card {
       height: 100%;
-      border: 0;
+      max-width: 80%;
+      border: none;
       border-radius: var(--radius);
       box-shadow: var(--shadow);
       overflow: hidden;
       background: var(--card);
+      display: flex;
+      align-items: center;
+    }
+
+    .faq-card a {
+         text-decoration: none; 
+         color: #000;
+    }
+    
+    .faq-card img {
+        height: clamp(50px, 8vh, 50px);
+        width: clamp(50px, 8vw, 50px);
+        margin-top: -20px;
     }
 
     /* FOOTER */

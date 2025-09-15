@@ -30,7 +30,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="#">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="map.html" target="_blank">Mapa</a></li>
+            <li class="nav-item"><a class="nav-link" href="map.html">Mapa</a></li>
             <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
           </ul>
         </div>
@@ -48,7 +48,7 @@
         </div>
         <div class="search-field">
           <span class="material-symbols-outlined search-icon">search</span>
-          <input id="search-bar" class="search-bar" type="text" placeholder="Procure por pontos de coleta" target="_blank" />
+          <input id="search-bar" class="search-bar" type="text" placeholder="Procure por pontos de coleta"/>
         </div>
       </div>
     </section>
@@ -123,20 +123,6 @@
 
   <!-- Bootstrap JS -->
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
-
-  <!-- Seu script (opcional) -->
-  <script>
-    // Exemplo simples: Enter no campo de busca
-    const searchInput = document.getElementById('search-bar');
-    if (searchInput) {
-      searchInput.addEventListener('keydown', (e) => {
-        if (e.key === 'Enter') {
-          // Troque por sua lógica de busca / navegação
-          alert(`Buscando por: ${searchInput.value.trim() || 'todos os pontos'}`);
-        }
-      });
-    }
-  </script>
 </body>
 
 </html>

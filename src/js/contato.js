@@ -1,3 +1,4 @@
+// 
 function loginIssues() {
     window.location.href = "loginIssues.html"
 }
@@ -7,7 +8,7 @@ function faq() {
 }
 
 function suggestions() {
-    window.location.href = "cadastro.html"
+    window.location.href = "suggestions.html"
 }
 
 const questions = document.querySelectorAll('.faq-question');

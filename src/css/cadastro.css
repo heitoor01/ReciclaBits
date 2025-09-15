@@ -36,6 +36,10 @@ body {
     letter-spacing: 0.4px;
 }
 
+main {
+    background: var(--brand-3);
+}
+
 .formulario {
     padding: 100px;
 }

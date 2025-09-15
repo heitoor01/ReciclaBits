@@ -4,12 +4,11 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mapa</title>
-    <link rel="stylesheet" href="src/css/map.css">
-
+    <title>Cadastre-se</title>
+    <link rel="stylesheet" href="src/css/cadastro.css">
+    <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
-
 </head>
 
 <body>
@@ -26,8 +25,8 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="map.html">Mapa</a></li>
+                        <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="map.html">Mapa</a></li>
                         <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
                         <li class="nav-item"><a class="nav-link" href="sobreNos.html">Sobre nós</a></li>
                     </ul>
@@ -36,14 +35,25 @@
         </nav>
     </header>
     <main>
-        <div class="map">
-            <iframe
-                src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d116897.25178836817!2d-46.5052518091251!3d-23.710297056831518!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce4278871d7eef%3A0x9eaaca862adb4ede!2sSanto%20Andr%C3%A9%2C%20State%20of%20S%C3%A3o%20Paulo!5e0!3m2!1sen!2sbr!4v1757515168019!5m2!1sen!2sbr"
-                width="70%" height="auto" style="border:0;" allowfullscreen="" loading="lazy"
-                referrerpolicy="no-referrer-when-downgrade"></iframe>
+        <div class="formulario">
+            <form>
+                <div class="mb-3">
+                    <label for="exampleInputName1" class="form-label">Nome</label>
+                    <input type="text" class="form-control" id="exampleInputName1" aria-describedby="nameHelp">
+                </div>
+                <div class="mb-3">
+                    <label for="exampleInputEmail1" class="form-label">Endereço de email</label>
+                    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp" autocomplete="off">
+                </div>
+                <div class="mb-3">
+                    <label for="#" class="form-label">Nos dê dua sugestão!</label>
+                    <textarea name="Text" id="exampleTextArea" type="text" class="form-control"  rows="8" cols="50" aria-describedby="SuggestionHelp" autocomplete="off"></textarea>
+                </div>
+                <button type="submit" class="btn btn-success">Enviar</button>
+            </form>
         </div>
     </main>
-    <footer>
+    <footer id="contato">
         <div class="container">
             <div class="row gy-4 align-items-center">
                 <div class="col-12 col-md-4">
@@ -67,4 +77,5 @@
 </body>
 <!-- Bootstrap JS -->
   <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
 </html>

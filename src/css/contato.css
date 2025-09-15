@@ -43,6 +43,9 @@
 
     /* CARDS */
 
+    .cards {
+      justify-content: center;
+    }
     .cardzin:hover {
         cursor: pointer;
         transform: scale(1.05);

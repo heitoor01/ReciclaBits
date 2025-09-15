@@ -106,6 +106,7 @@
     /* SECTION: INFO */
     .info {
       padding: clamp(56px, 8vw, 88px) 0 72px; /* abre espaço para a barra de busca flutuante */
+      background: var(--brand-3);
     }
 
     .recicla-card {

@@ -38,6 +38,7 @@
         min-height: 70vh;
         display: flex;
         align-items: center;
+        background: var(--brand-3);
     }
 
     /* CARDS */

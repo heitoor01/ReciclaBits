@@ -1,15 +1,15 @@
 // 
-function loginIssues() {
-    window.location.href = "loginIssues.html"
-}
-
 function faq() {
-    window.location.href = "loginIssues.html"
+    window.location.href = "faq.html"
 }
 
 function suggestions() {
     window.location.href = "suggestions.html"
 }
+
+function goHome() {
+    window.location.href = "index.html"
+};
 
 const questions = document.querySelectorAll('.faq-question');
 questions.forEach(q => {

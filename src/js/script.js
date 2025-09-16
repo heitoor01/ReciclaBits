@@ -16,7 +16,7 @@ searchInput.addEventListener("keydown", (e) => {
     const result = fuse.search(searchInput.value.trim());
     if (result.length > 0) {
       window.location.href = result[0].item.url;
-    } else {
+    } else  {
       window.location.href = "notFound.html";
     }
   }

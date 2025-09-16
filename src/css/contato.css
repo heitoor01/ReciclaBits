@@ -1,109 +1,132 @@
 :root {
-      --bg: #fffdfb;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --brand: #2e7d32; /* verde reciclável vibe */
-      --brand-2: #a5d6a7;
-      --brand-3: #f5faeb;
-      --card: #ffffff;
-      --radius: 16px;
-      --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    }
+  --bg: #fffdfb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --brand: #2e7d32;
+  /* verde reciclável vibe */
+  --brand-2: #a5d6a7;
+  --brand-3: #f5faeb;
+  --card: #ffffff;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
 
-    html, body {
-      height: 100%;
-      background: var(--bg);
-      color: var(--text);
-      scroll-behavior: smooth;
-      background: var(--brand-3);
-    }
+html,
+body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+  background: var(--brand-3);
+}
 
-    /* NAV */
-    .navbar {
-      box-shadow: var(--shadow);
-      background: #fff !important;
-    }
+/* NAV */
+.navbar {
+  box-shadow: var(--shadow);
+  background: #fff !important;
+}
 
-    .logo {
-      width: clamp(36px, 8vw, 150px);
-      height: auto;
-    }
+.logo {
+  width: clamp(36px, 8vw, 150px);
+  height: auto;
+}
 
-    .navbar-brand {
-      font-weight: 700;
-      letter-spacing: 0.4px;
-    }
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
 
-    .info {
-        min-height: 70vh;
-        display: flex;
-        align-items: center;
-        background: var(--brand-3);
-    }
+.info {
+  min-height: 70vh;
+  display: flex;
+  align-items: center;
+  background: var(--brand-3);
+}
 
-    /* CARDS */
+/* CARDS */
 
-    .cards {
-      justify-content: center;
-    }
-    .cardzin:hover {
-        cursor: pointer;
-        transform: scale(1.05);
-        transition: 0.2s ease-in-out;
-    }
-    .faq-card {
-      height: 100%;
-      max-width: 80%;
-      border: none;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      background: var(--card);
-      display: flex;
-      align-items: center;
-      padding: 20px;
-    }
+.cards {
+  justify-content: center;
+}
 
-    .faq-card a {
-         text-decoration: none; 
-         color: #000;
-    }
-    
-    .faq-card img {
-        height: clamp(50px, 8vh, 50px);
-        width: clamp(50px, 8vw, 50px);
-    }
+.cardzin:hover {
+  cursor: pointer;
+  transform: scale(1.05);
+  transition: 0.2s ease-in-out;
+}
 
-    /* FOOTER */
-    footer {
-      border-top: 1px solid #eee;
-      background: #fafafa;
-      padding: 28px 0;
-    }
+.faq-card {
+  height: 100%;
+  max-width: 80%;
+  border: none;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  background: var(--card);
+  display: flex;
+  align-items: center;
+  padding: 20px;
+}
 
-    footer a {
-      color: var(--text);
-      text-decoration: none;
-    }
+.faq-card a {
+  text-decoration: none;
+  color: #000;
+}
 
-    footer a:hover {
-      color: var(--brand);
-      text-decoration: underline;
-    }
+.faq-card img {
+  height: clamp(50px, 8vh, 50px);
+  width: clamp(50px, 8vw, 50px);
+}
 
-    .copy p {
-      margin: 0;
-      color: var(--muted);
-    }
+/* FOOTER */
+footer {
+  border-top: 1px solid #eee;
+  background: #fafafa;
+  padding: 28px 0;
+}
 
-    /* SMALL DEVICES TWEAKS */
-    @media (max-width: 576px) {
-      .apresentacao { inset: auto 0 34%; }
-      .search-field { border-radius: 14px; }
-      .logo { width: 90px; }
-    }
+footer a {
+  color: var(--text);
+  text-decoration: none;
+}
 
-    /* REDUÇÃO DE MOVIMENTO (acessibilidade) */
-    @media (prefers-reduced-motion: reduce) {
-      * { scroll-behavior: auto; }
-    }
+footer a:hover {
+  color: var(--brand);
+  text-decoration: underline;
+}
+
+.copy p {
+  margin: 0;
+  color: var(--muted);
+}
+
+/* SMALL DEVICES TWEAKS */
+@media (max-width: 576px) {
+  .apresentacao {
+    inset: auto 0 34%;
+  }
+
+  .search-field {
+    border-radius: 14px;
+  }
+
+  .logo {
+    width: 90px;
+  }
+
+  .cardzin {
+    display: flex;
+    justify-content: center;
+  }
+
+  .faq-card {
+    min-width: 200px !important;
+  }
+}
+
+/* REDUÇÃO DE MOVIMENTO (acessibilidade) */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}

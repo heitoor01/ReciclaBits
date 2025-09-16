@@ -41,7 +41,7 @@ body {
 
 .hero {
     position: relative;
-  }
+}
 
 .map {
     display: flex;
@@ -58,7 +58,8 @@ body {
     aspect-ratio: 16 / 9;
     border: 0;
     border-radius: 12px;
-    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.08);;
+    box-shadow: 0 18px 30px rgba(0, 0, 0, 0.08);
+    ;
 }
 
 footer {
@@ -87,7 +88,10 @@ footer a:hover {
     .map iframe {
         aspect-ratio: 4 / 3;
     }
-    .logo { width: 90px; }
+
+    .logo {
+        width: 90px;
+    }
 }
 
 

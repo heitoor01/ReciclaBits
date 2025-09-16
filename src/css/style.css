@@ -1,165 +1,178 @@
 :root {
-      --bg: #fffdfb;
-      --text: #1f2937;
-      --muted: #6b7280;
-      --brand: #2e7d32; /* verde reciclável vibe */
-      --brand-2: #a5d6a7;
-      --brand-3: #f5faeb;
-      --card: #ffffff;
-      --radius: 16px;
-      --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
-    }
+  --bg: #fffdfb;
+  --text: #1f2937;
+  --muted: #6b7280;
+  --brand: #2e7d32;
+  /* verde reciclável vibe */
+  --brand-2: #a5d6a7;
+  --brand-3: #f5faeb;
+  --card: #ffffff;
+  --radius: 16px;
+  --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
 
-    html, body {
-      height: 100%;
-      background: var(--bg);
-      color: var(--text);
-      scroll-behavior: smooth;
-      background: var(--brand-3);
-    }
+html,
+body {
+  height: 100%;
+  background: var(--bg);
+  color: var(--text);
+  scroll-behavior: smooth;
+  background: var(--brand-3);
+}
 
-    /* NAV */
-    .navbar {
-      box-shadow: var(--shadow);
-      background: #fff !important;
-    }
+/* NAV */
+.navbar {
+  box-shadow: var(--shadow);
+  background: #fff !important;
+}
 
-    .logo {
-      width: clamp(36px, 8vw, 150px);
-      height: auto;
-    }
+.logo {
+  width: clamp(36px, 8vw, 150px);
+  height: auto;
+}
 
-    .navbar-brand {
-      font-weight: 700;
-      letter-spacing: 0.4px;
-    }
+.navbar-brand {
+  font-weight: 700;
+  letter-spacing: 0.4px;
+}
 
-    /* BANNER / HERO */
-    .banner {
-      position: relative;
-      overflow: clip;
-    }
+/* BANNER / HERO */
+.banner {
+  position: relative;
+  overflow: clip;
+}
 
-    .hero {
-      position: relative;
-    }
+.hero {
+  position: relative;
+}
 
-    .hero img {
-      width: 100%;
-      height: clamp(220px, 40vw, 540px);
-      object-fit: cover;
-      display: block;
-      filter: saturate(1.05);
-    }
+.hero img {
+  width: 100%;
+  height: clamp(220px, 40vw, 540px);
+  object-fit: cover;
+  display: block;
+  filter: saturate(1.05);
+}
 
-    .apresentacao {
-      position: absolute;
-      inset: auto 0 24%;
-      z-index: 2;
-      display: grid;
-      place-items: center;
-      padding-inline: clamp(16px, 4vw, 32px);
-    }
+.apresentacao {
+  position: absolute;
+  inset: auto 0 24%;
+  z-index: 2;
+  display: grid;
+  place-items: center;
+  padding-inline: clamp(16px, 4vw, 32px);
+}
 
-    .titulo {
-      color: #65743c;
-      font-weight: 800;
-      text-align: center;
-      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
-      font-size: clamp(1rem, 2.5vw, 1.5rem);
-      letter-spacing: .5px;
-      width: 70%;
-    }
+.titulo {
+  color: #65743c;
+  font-weight: 800;
+  text-align: center;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.35);
+  font-size: clamp(1rem, 2.5vw, 1.5rem);
+  letter-spacing: .5px;
+  width: 70%;
+}
 
-    /* SEARCH */
-    .search-field {
-      position: absolute;
-      left: 50%;
-      bottom: clamp(8px, 4vw, -28px);
-      transform: translateX(-50%);
-      z-index: 3;
-      width: min(92%, 880px);
-      background: #fff;
-      border-radius: 999px;
-      box-shadow: var(--shadow);
-      display: flex;
-      align-items: center;
-      gap: 12px;
-      padding: 10px 16px 10px 16px;
-    }
+/* SEARCH */
+.search-field {
+  position: absolute;
+  left: 50%;
+  bottom: clamp(8px, 4vw, -28px);
+  transform: translateX(-50%);
+  z-index: 3;
+  width: min(92%, 880px);
+  background: #fff;
+  border-radius: 999px;
+  box-shadow: var(--shadow);
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 10px 16px 10px 16px;
+}
 
-    .search-bar {
-      border: 0;
-      outline: 0;
-      flex: 1 1 auto;
-      min-width: 0;
-      font-size: clamp(0.95rem, 1.6vw, 1.05rem);
-      padding: 10px 6px;
-    }
+.search-bar {
+  border: 0;
+  outline: 0;
+  flex: 1 1 auto;
+  min-width: 0;
+  font-size: clamp(0.95rem, 1.6vw, 1.05rem);
+  padding: 10px 6px;
+}
 
-    .search-icon {
-      font-variation-settings: 'FILL' 0, 'wght' 500;
-      font-size: 22px;
-      color: var(--muted);
-    }
+.search-icon {
+  font-variation-settings: 'FILL' 0, 'wght' 500;
+  font-size: 22px;
+  color: var(--muted);
+}
 
-    /* SECTION: INFO */
-    .info {
-      padding: clamp(56px, 8vw, 88px) 0 72px; /* abre espaço para a barra de busca flutuante */
-      background: var(--brand-3);
-    }
+/* SECTION: INFO */
+.info {
+  padding: clamp(56px, 8vw, 88px) 0 72px;
+  /* abre espaço para a barra de busca flutuante */
+  background: var(--brand-3);
+}
 
-    .recicla-card {
-      height: 100%;
-      border: 0;
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      overflow: hidden;
-      background: var(--card);
-    }
+.recicla-card {
+  height: 100%;
+  border: 0;
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  background: var(--card);
+}
 
-    .recicla-img {
-      width: 100%;
-      height: clamp(400px, 22vw, 220px);
-      object-fit: cover;
-    }
+.recicla-img {
+  width: 100%;
+  height: clamp(400px, 22vw, 220px);
+  object-fit: cover;
+}
 
-    .recicla-card p {
-      color: var(--muted);
-      line-height: 1.65;
-      margin: 0;
-    }
+.recicla-card p {
+  color: var(--muted);
+  line-height: 1.65;
+  margin: 0;
+}
 
-    /* FOOTER */
-    footer {
-      border-top: 1px solid #eee;
-      background: #fafafa;
-      padding: 28px 0;
-    }
+/* FOOTER */
+footer {
+  border-top: 1px solid #eee;
+  background: #fafafa;
+  padding: 28px 0;
+}
 
-    footer a {
-      color: var(--text);
-      text-decoration: none;
-    }
+footer a {
+  color: var(--text);
+  text-decoration: none;
+}
 
-    footer a:hover {
-      color: var(--brand);
-      text-decoration: underline;
-    }
+footer a:hover {
+  color: var(--brand);
+  text-decoration: underline;
+}
 
-    .copy p {
-      margin: 0;
-      color: var(--muted);
-    }
+.copy p {
+  margin: 0;
+  color: var(--muted);
+}
 
-    /* SMALL DEVICES TWEAKS */
-    @media (max-width: 576px) {
-      .apresentacao { inset: auto 0 34%; }
-      .search-field { border-radius: 14px; }
-      .logo { width: 90px; }
-    }
+/* SMALL DEVICES TWEAKS */
+@media (max-width: 576px) {
+  .apresentacao {
+    inset: auto 0 34%;
+  }
 
-    /* REDUÇÃO DE MOVIMENTO (acessibilidade) */
-    @media (prefers-reduced-motion: reduce) {
-      * { scroll-behavior: auto; }
-    }
+  .search-field {
+    border-radius: 14px;
+  }
+
+  .logo {
+    width: 90px;
+  }
+}
+
+/* REDUÇÃO DE MOVIMENTO (acessibilidade) */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    scroll-behavior: auto;
+  }
+}

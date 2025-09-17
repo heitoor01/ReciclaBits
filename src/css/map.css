@@ -51,6 +51,18 @@ body {
     background: var(--brand-3);
 }
 
+.locals {
+    width: 60vh;
+    padding: 3rem;
+    
+    
+}
+
+.card {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    padding: 1.5rem;
+}
 
 .map iframe {
     width: 100%;

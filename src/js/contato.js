@@ -15,6 +15,10 @@ function talkToUs() {
     window.location.href = "talkToUs.html"
 };
 
+function signUp() {
+  window.location.href = "cadastro.html"
+};
+
 const questions = document.querySelectorAll('.faq-question');
 questions.forEach(q => {
     q.addEventListener('click', () => {

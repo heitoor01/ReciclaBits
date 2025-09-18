@@ -36,6 +36,39 @@ body {
   letter-spacing: 0.4px;
 }
 
+.login-box {
+  position: absolute;
+  top: 70px;
+  /* logo abaixo do header */
+  right: 20px;
+  width: 300px;
+  background: #fff;
+  border-radius: 8px;
+  padding: 20px;
+  display: none;
+  /* começa escondida */
+  z-index: 1050;
+  /* acima de tudo */
+}
+
+.login-box.show {
+  display: block;
+  animation: slideDown 0.3s ease;
+}
+
+@keyframes slideDown {
+  from {
+    opacity: 0;
+    transform: translateY(-10px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
 /* BANNER / HERO */
 .banner {
   position: relative;

@@ -7,7 +7,7 @@ const rotas = [
 
 const fuse = new Fuse(rotas, {
   keys: ["name"],
-  threshold: 0.4 // tolerância ao erro (quanto menor, mais rígido)
+  threshold: 0.3 // tolerância ao erro (quanto menor, mais rígido)
 });
 
 const searchInput = document.getElementById("search-bar");

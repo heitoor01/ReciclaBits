@@ -19,6 +19,9 @@ function signUp() {
   window.location.href = "cadastro.html"
 };
 
+function recPass() {
+    window.location.href = "passwordRec.html"
+};
 const questions = document.querySelectorAll('.faq-question');
 questions.forEach(q => {
     q.addEventListener('click', () => {

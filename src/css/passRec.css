@@ -1,0 +1,110 @@
+:root {
+    --bg: #fffdfb;
+    --text: #1f2937;
+    --muted: #6b7280;
+    --brand: #2e7d32;
+    /* verde reciclável vibe */
+    --brand-2: #a5d6a7;
+    --brand-3: #f5faeb;
+    --card: #ffffff;
+    --radius: 16px;
+    --shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+html,
+body {
+    height: 100%;
+    background: var(--bg);
+    color: var(--text);
+    scroll-behavior: smooth;
+    background: var(--brand-3);
+}
+
+/* NAV */
+.navbar {
+    box-shadow: var(--shadow);
+    background: #fff !important;
+}
+
+.logo {
+    width: clamp(36px, 8vw, 150px);
+    height: auto;
+}
+
+.navbar-brand {
+    font-weight: 700;
+    letter-spacing: 0.4px;
+}
+
+main {
+    background: var(--brand-3);
+    min-height: 65vh;
+}
+
+.formulario {
+    padding: 100px;
+}
+
+.form-card {
+  max-width: 500px;
+  border-radius: 16px;
+}
+
+body {
+  background: var(--brand-3);
+}
+
+h1 {
+  font-weight: 600;
+  color: var(--brand);
+}
+
+button[type="submit"] {
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 10px;
+}
+
+/* FOOTER */
+footer {
+    border-top: 1px solid #eee;
+    background: #fafafa;
+    padding: 28px 0;
+}
+
+footer a {
+    color: var(--text);
+    text-decoration: none;
+}
+
+footer a:hover {
+    color: var(--brand);
+    text-decoration: underline;
+}
+
+.copy p {
+    margin: 0;
+    color: var(--muted);
+}
+
+/* SMALL DEVICES TWEAKS */
+@media (max-width: 576px) {
+    .apresentacao {
+        inset: auto 0 34%;
+    }
+
+    .search-field {
+        border-radius: 14px;
+    }
+
+    .logo {
+        width: 90px;
+    }
+}
+
+/* REDUÇÃO DE MOVIMENTO (acessibilidade) */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        scroll-behavior: auto;
+    }
+}

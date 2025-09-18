@@ -38,9 +38,9 @@ body {
 
 .login-box {
   position: absolute;
-  top: 70px;
+  top: 106px;
   /* logo abaixo do header */
-  right: 20px;
+  right: 180px;
   width: 300px;
   background: #fff;
   border-radius: 8px;
@@ -200,6 +200,18 @@ footer a:hover {
 
   .logo {
     width: 90px;
+  }
+
+  .login-box {
+    position: fixed;
+    /* fixa no centro */
+    top: 54%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* centraliza */
+    width: 90%;
+    /* ocupa quase toda a largura do celular */
+    max-width: 350px;
   }
 }
 

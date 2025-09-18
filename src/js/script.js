@@ -17,7 +17,7 @@ searchInput.addEventListener("keydown", (e) => {
 
     // caso nada tenha sido digitado
     if (termo === "") {
-      alert("Você precisa digitar algo antes de pesquisar.");
+      // alert("Você precisa digitar algo antes de pesquisar.");
       return;
     }
 

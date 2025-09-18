@@ -13,10 +13,18 @@ const fuse = new Fuse(rotas, {
 const searchInput = document.getElementById("search-bar");
 searchInput.addEventListener("keydown", (e) => {
   if (e.key === "Enter") {
-    const result = fuse.search(searchInput.value.trim());
+    const termo = searchInput.value.trim();
+
+    // caso nada tenha sido digitado
+    if (termo === "") {
+      alert("Você precisa digitar algo antes de pesquisar.");
+      return;
+    }
+
+    const result = fuse.search(termo);
     if (result.length > 0) {
       window.location.href = result[0].item.url;
-    } else  {
+    } else {
       window.location.href = "notFound.html";
     }
   }

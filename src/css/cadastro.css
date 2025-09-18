@@ -44,6 +44,26 @@ main {
     padding: 100px;
 }
 
+.form-card {
+  max-width: 500px;
+  border-radius: 16px;
+}
+
+body {
+  background: var(--brand-3);
+}
+
+h1 {
+  font-weight: 600;
+  color: var(--brand);
+}
+
+button[type="submit"] {
+  font-weight: 500;
+  padding: 10px;
+  border-radius: 10px;
+}
+
 /* FOOTER */
 footer {
     border-top: 1px solid #eee;

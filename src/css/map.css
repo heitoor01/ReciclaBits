@@ -46,33 +46,41 @@ body {
 .map {
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
+    gap: 2rem; /* espaço entre cards e mapa */
     padding: 1rem;
     background: var(--brand-3);
+    flex-wrap: wrap; /* deixa quebrar linha em telas pequenas */
 }
 
 .locals {
-    width: 60vh;
-    padding: 3rem;
-    
-    
+    flex: 1 1 300px; /* ocupa espaço flexível mas com mínimo de 300px */
+    max-width: 400px; /* não estica demais em telas grandes */
+    padding: 1rem;
 }
 
 .card {
     font-family: Arial, Helvetica, sans-serif;
     font-size: 1rem;
     padding: 1.5rem;
-    margin-top: 10px;
+    margin-bottom: 10px;
+    border-radius: var(--radius);
+    box-shadow: var(--shadow);
+    background: var(--card);
 }
 
 .map iframe {
+    flex: 2 1 500px; /* ocupa mais espaço que os cards */
     width: 100%;
-    max-width: 1200px;
-    aspect-ratio: 16 / 9;
+    max-width: 800px;
+    min-height: 600px;
+    height: 100%;
+    /*aspect-ratio: 16 / 9;*/
     border: 0;
     border-radius: 12px;
     box-shadow: 0 18px 30px rgba(0, 0, 0, 0.08);
-    ;
+    margin-top: 10px;
+    
 }
 
 footer {
@@ -97,19 +105,36 @@ footer a:hover {
 }
 
 
+/* Tablets */
 @media (max-width: 768px) {
-    .map iframe {
-        aspect-ratio: 4 / 3;
+    .map {
+        flex-direction: column;
+        align-items: center;
     }
 
-    .logo {
-        width: 90px;
+    .locals {
+        max-width: 100%;
+        padding: 0;
+    }
+
+    .map iframe {
+        aspect-ratio: 4 / 3;
+        max-width: 100%;
     }
 }
 
-
+/* Celulares */
 @media (max-width: 480px) {
     .map iframe {
         aspect-ratio: 1 / 1;
+    }
+
+    .logo {
+        width: 80px;
+    }
+
+    .card {
+        font-size: 0.9rem;
+        padding: 1rem;
     }
 }

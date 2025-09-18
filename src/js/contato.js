@@ -11,6 +11,10 @@ function goHome() {
     window.location.href = "index.html"
 };
 
+function talkToUs() {
+    window.location.href = "talkToUs.html"
+};
+
 const questions = document.querySelectorAll('.faq-question');
 questions.forEach(q => {
     q.addEventListener('click', () => {

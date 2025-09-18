@@ -36,26 +36,34 @@ body {
     letter-spacing: 0.4px;
 }
 
-/* MAIN */
-
 main {
-    min-height: 68vh;
+    min-height: 69vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
     background: var(--brand-3);
-    padding: clamp(16px, 8vw, 16px);
 }
 
-.history {
-    padding: clamp(20px, 4vw, 8px);
-    border-radius: var(--radius);
+.cards {
+    margin: 30px 0;
+
 }
 
-.history p {
-    color: var(--muted);
-    line-height: 1.65;
-    margin: 0;
-    font-size: 16px;
+.link {
+    cursor: pointer;
+    min-width: 200px;
 }
 
+.link h2 {
+    font-size: 20px;
+    text-align: center;
+}
+
+.link:hover {
+    transform: scale(1.05);
+    transition: 0.2s ease-in-out;
+}
 
 /* FOOTER */
 footer {

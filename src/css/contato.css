@@ -78,6 +78,10 @@ body {
   width: clamp(50px, 8vw, 50px);
 }
 
+.tktu {
+  background: var(--brand-3);
+}
+
 /* FOOTER */
 footer {
   border-top: 1px solid #eee;

@@ -1,13 +1,25 @@
-version: "3.8"
+
 
 services:
+
+  web:
+    build:
+      context: .
+      dockerfile: ./web/Dockerfile.laravel
+    working_dir: /var/www/html/laravel 
+    ports:
+      - 5001:80
+    volumes:
+      - ./laravel:/var/www/html/laravel
+      - ./src:/var/www/html/src
+
   app:
     build:
       context: ./web
       dockerfile: Dockerfile.laravel
     container_name: laravel_app
     ports:
-      - "8080:80"   # Alterei a porta 80 do container para 8080 no host
+      - "3001:80"   # Alterei a porta 80 do container para 8080 no host
     volumes:
       - ./src:/var/www/html
     depends_on:
@@ -18,7 +30,7 @@ services:
     container_name: laravel_db
     restart: always
     ports:
-      - "3307:3306"   # Alterei a porta do MySQL (host:container)
+      - "4001:4002"   # Alterei a porta do MySQL (host:container)
     environment:
       MYSQL_DATABASE: laravel
       MYSQL_USER: laravel
@@ -32,7 +44,7 @@ services:
     container_name: laravel_phpmyadmin
     restart: always
     ports:
-      - "8081:80"
+      - "7070:80"
     environment:
       PMA_HOST: db
       MYSQL_ROOT_PASSWORD: root

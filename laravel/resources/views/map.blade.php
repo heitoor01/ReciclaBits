@@ -26,7 +26,7 @@
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
                         <li class="nav-item"><a class="nav-link" aria-current="page" href="/">Home</a></li>
-                        <li class="nav-item"><a class="nav-link active" href="map.html">Mapa</a></li>
+                        <li class="nav-item"><a class="nav-link active" href="map.blade.php">Mapa</a></li>
                         <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
                         <li class="nav-item"><a class="nav-link" href="sobreNos.html">Sobre nós</a></li>
                     </ul>

@@ -17,7 +17,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <img src="src/img/ReciclaBits.png" alt="logo" class="logo" onclick="goHome()"/>
+                    <img src="{{ asset('img/ReciclaBits.png') }}" alt="logo" class="logo" onclick="goHome()"/>
                     <span>ReciclaBits</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -42,7 +42,7 @@
                     <!-- Card 1 -->
                     <div class="col-12 col-md-6 col-lg-4 cardzin" onclick="faq()">
                         <article class="card faq-card h-100">
-                            <img class="faq-img" src="src/img/help.png" alt="" />
+                            <img class="faq-img" src="{{ asset('img/help.png') }}" alt="" />
                             <div class="card-body">
                                 <h2>Dúvidas</h2>
                             </div>
@@ -51,7 +51,7 @@
                     <!-- Card 2 -->
                     <div class="col-12 col-md-6 col-lg-4 cardzin" onclick="suggestions()">
                         <article class="card faq-card h-100">
-                            <img class="faq-img" src="src/img/question.png" alt="" />
+                            <img class="faq-img" src="{{ asset('img/question.png') }}" alt="" />
                             <div class="card-body">
                                 <h2>Sugestões</h2>
                             </div>
@@ -60,7 +60,7 @@
                     <!-- Card 3 -->
                     <div class="col-12 col-md-6 col-lg-4 cardzin" onclick="talkToUs()">
                         <article class="card faq-card h-100">
-                            <img class="faq-img" src="src/img/phone-call.png" alt="" />
+                            <img class="faq-img" src="{{ asset('img/phone-call.png') }}" alt="" />
                             <div class="card-body">
                                 <h2>Fale conosco</h2>
                             </div>

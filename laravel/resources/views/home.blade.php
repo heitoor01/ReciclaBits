@@ -31,10 +31,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
             <li class="nav-item"><a class="nav-link" href="map.blade.php">Mapa</a></li>
-            <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-            <li class="nav-item"><a class="nav-link" href="sobreNos.html">Sobre nós</a></li>
+            <li class="nav-item"><a class="nav-link" href="contato.blade.php">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="sobreNos.blade.php">Sobre nós</a></li>
             <!-- Botão de Login -->
             <li class="nav-item">
               <button id="btn-login" class="btn btn-success ms-3">Login</button>

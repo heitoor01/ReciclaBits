@@ -21,7 +21,7 @@
   <header>
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
-        <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
+        <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
           <img src="{{ asset('img/ReciclaBits.png') }}" alt="logo" class="logo" onclick="goHome()" />
           <span>ReciclaBits</span>
         </a>
@@ -31,10 +31,10 @@
         </button>
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a class="nav-link active" aria-current="page" href="/">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="map.blade.php">Mapa</a></li>
-            <li class="nav-item"><a class="nav-link" href="contato.blade.php">Contato</a></li>
-            <li class="nav-item"><a class="nav-link" href="sobreNos.blade.php">Sobre nós</a></li>
+            <li class="nav-item"><a class="nav-link active" aria-current="page" href="{{ route('home') }}">Home</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('map') }}">Mapa</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('contato') }}">Contato</a></li>
+            <li class="nav-item"><a class="nav-link" href="{{ route('sobre-nos') }}">Sobre nós</a></li>
             <!-- Botão de Login -->
             <li class="nav-item">
               <button id="btn-login" class="btn btn-success ms-3">Login</button>
@@ -51,7 +51,7 @@
                 <label for="senha" class="form-label">Senha</label>
                 <input type="password" id="senha" class="form-control" placeholder="Digite sua senha" required>
               </div>
-              <a href="passwordRec.html" class="small d-block mb-2">Esqueceu sua senha?</a>
+              <a href="{{ route('password.recovery') }}" class="small d-block mb-2">Esqueceu sua senha?</a>
               <button type="submit" class="btn btn-success w-100">Entrar</button>
               <p class="mt-3 text-center small">Não tem cadastro?</p>
               <button type="button" class="btn btn-primary w-100" onclick="signUp()">Cadastre-se</button>
@@ -143,7 +143,7 @@
         <div class="col-12 col-md-4">
           <div class="d-flex flex-column gap-1">
             <strong>Sobre nós</strong>
-            <a href="sobreNos.html">Quem somos</a>
+            <a href="{{ route('sobre-nos') }}">Quem somos</a>
           </div>
         </div>
         <div class="col-12 col-md-4 text-md-center copy">

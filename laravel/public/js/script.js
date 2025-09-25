@@ -1,8 +1,8 @@
 const rotas = [
-  { name: "home", url: "index.html" },
-  { name: "mapa", url: "map.html" },
-  { name: "contato", url: "contato.html" },
-  { name: "sugestão", url: "suggestions.html" }
+  { name: "home", url: "/" },
+  { name: "mapa", url: "/mapa" },
+  { name: "contato", url: "/contato" },
+  { name: "sugestão", url: "/sugestoes" }
 ];
 
 const fuse = new Fuse(rotas, {
@@ -25,7 +25,7 @@ searchInput.addEventListener("keydown", (e) => {
     if (result.length > 0) {
       window.location.href = result[0].item.url;
     } else {
-      window.location.href = "notFound.html";
+      window.location.href = "/nao-encontrado";
     }
   }
 });

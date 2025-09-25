@@ -14,8 +14,8 @@
     <header>
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
-                <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-                    <img src="src/img/ReciclaBits.png" alt="logo" class="logo" onclick="goHome()"/>
+                <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
+                    <img src="{{ asset('img/ReciclaBits.png') }}" alt="logo" class="logo" onclick="goHome()"/>
                     <span>ReciclaBits</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -24,10 +24,10 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="index.html">Home</a></li>
-                        <li class="nav-item"><a class="nav-link" href="map.html">Mapa</a></li>
-                        <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
-                        <li class="nav-item"><a class="nav-link" href="sobreNos.html">Sobre nós</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('map') }}">Mapa</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('contato') }}">Contato</a></li>
+                        <li class="nav-item"><a class="nav-link" href="{{ route('sobre-nos') }}">Sobre nós</a></li>
                     </ul>
                 </div>
             </div>
@@ -58,7 +58,7 @@
                 <div class="col-12 col-md-4">
                     <div class="d-flex flex-column gap-1">
                         <strong>Sobre nós</strong>
-                        <a href="sobreNos.html">Quem somos</a>
+                        <a href="{{ route('sobre-nos') }}">Quem somos</a>
                     </div>
                 </div>
                 <div class="col-12 col-md-4 text-md-center copy">

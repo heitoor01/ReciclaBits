@@ -1,26 +1,26 @@
 // 
 function faq() {
-    window.location.href = "faq.html"
+    window.location.href = "/faq"
 }
 
 function suggestions() {
-    window.location.href = "suggestions.html"
+    window.location.href = "/sugestoes"
 }
 
 function goHome() {
-    window.location.href = "index.html"
+    window.location.href = "/"
 };
 
 function talkToUs() {
-    window.location.href = "talkToUs.html"
+    window.location.href = "/fale-conosco"
 };
 
 function signUp() {
-  window.location.href = "cadastro.html"
+  window.location.href = "/cadastro"
 };
 
 function recPass() {
-    window.location.href = "passwordRec.html"
+    window.location.href = "/recuperar-senha"
 };
 const questions = document.querySelectorAll('.faq-question');
 questions.forEach(q => {

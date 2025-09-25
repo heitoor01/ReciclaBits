@@ -5,15 +5,14 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>ReciclaBits</title>
-  <link rel="stylesheet" href="src/css/style.css">
+  <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+
   <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
   <!-- Google Icons (lupa) -->
-  <link rel="stylesheet"
-    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 
 </head>
 
@@ -23,7 +22,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="index.html">
-          <img src="src/img/ReciclaBits.png" alt="logo" class="logo" onclick="goHome()" />
+          <img src="{{ asset('img/ReciclaBits.png') }}" alt="logo" class="logo" onclick="goHome()" />
           <span>ReciclaBits</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -33,7 +32,7 @@
         <div class="collapse navbar-collapse" id="navbarNav">
           <ul class="navbar-nav ms-auto">
             <li class="nav-item"><a class="nav-link active" aria-current="page" href="index.html">Home</a></li>
-            <li class="nav-item"><a class="nav-link" href="map.html">Mapa</a></li>
+            <li class="nav-item"><a class="nav-link" href="map.blade.php">Mapa</a></li>
             <li class="nav-item"><a class="nav-link" href="contato.html">Contato</a></li>
             <li class="nav-item"><a class="nav-link" href="sobreNos.html">Sobre nós</a></li>
             <!-- Botão de Login -->
@@ -67,7 +66,7 @@
     <!-- BANNER / HERO -->
     <section class="banner">
       <div class="hero">
-        <img src="src/img/Hero.png" alt="Lixeira e reciclagem" />
+        <img src="{{ asset('img/Hero.png') }}" alt="Lixeira e reciclagem" />
         <div class="apresentacao">
           <p class="titulo">EMPRESA CRIADA COM A IDEIA DE CONECTAR EMPRESA E COMUNIDADE EM BUSCA DE UMA CIDADE MAIS
             SUSTENTÁVEL</p>
@@ -86,7 +85,7 @@
           <!-- Card 1 -->
           <div class="col-12 col-md-6 col-lg-4">
             <article class="card recicla-card h-100">
-              <img class="recicla-img" src="src/img/Recicle.png" alt="Equipe ReciclaBits" />
+              <img class="recicla-img" src="{{ asset('img/Recicle.png') }}" alt="Equipe ReciclaBits" />
               <div class="card-body">
                 <h2>Por que reciclar?</h2>
                 <p>
@@ -103,7 +102,7 @@
           <!-- Card 2 -->
           <div class="col-12 col-md-6 col-lg-4">
             <article class="card recicla-card h-100">
-              <img class="recicla-img" src="/src/img/Recompensa.png" alt="Ganhe recompensas" />
+              <img class="recicla-img" src="{{ asset('img/Recompensa.png') }}" alt="Ganhe recompensas" />
               <div class="card-body">
                 <h2>Você pode ganhar reciclando</h2>
                 <p>
@@ -118,7 +117,7 @@
           <!-- Card 3 -->
           <div class="col-12 col-md-6 col-lg-4">
             <article class="card recicla-card h-100">
-              <img class="recicla-img" src="/src/img/Educacao.png" alt="Educação ambiental" />
+              <img class="recicla-img" src="{{ asset ('img/Educacao.png') }}" alt="Educação ambiental" />
               <div class="card-body">
                 <h2>Educação Ambiental</h2>
                 <p>
@@ -161,11 +160,12 @@
   </footer>
 
   <!-- Bootstrap JS -->
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
-    crossorigin="anonymous"></script>
-  <script src="src/js/script.js"></script>
-  <script src="src/js/contato.js"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
+  <script src="{{ asset('js/script.js') }}"></script>
+
+  <script src="{{ asset('js/contato.js') }}"></script>
+
 </body>
 
 

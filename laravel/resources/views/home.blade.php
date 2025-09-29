@@ -22,7 +22,7 @@
     <nav class="navbar navbar-expand-lg bg-body-tertiary">
       <div class="container">
         <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
-          <img src="{{ asset('img/ReciclaBits.png') }}" alt="logo" class="logo" onclick="goHome()" />
+          <img src="{{ asset('img/ReciclaBits.png') }}" alt="logo" class="logo" />
           <span>ReciclaBits</span>
         </a>
         <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -54,7 +54,7 @@
               <a href="{{ route('password.recovery') }}" class="small d-block mb-2">Esqueceu sua senha?</a>
               <button type="submit" class="btn btn-success w-100">Entrar</button>
               <p class="mt-3 text-center small">Não tem cadastro?</p>
-              <button type="button" class="btn btn-primary w-100" onclick="signUp()">Cadastre-se</button>
+              <a class="btn btn-primary w-100" href="{{ route('cadastro') }}">Cadastre-se</a>
             </form>
           </div>
         </div>

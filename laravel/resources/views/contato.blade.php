@@ -17,7 +17,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
-                    <img src="{{ asset('img/ReciclaBits.png') }}" alt="logo" class="logo" onclick="goHome()"/>
+                    <img src="{{ asset('img/ReciclaBits.png') }}" alt="logo" class="logo" />
                     <span>ReciclaBits</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
@@ -40,32 +40,32 @@
             <div class="container">
                 <div class="row g-4 cards">
                     <!-- Card 1 -->
-                    <div class="col-12 col-md-6 col-lg-4 cardzin" onclick="faq()">
+                    <a class="col-12 col-md-6 col-lg-4 cardzin" href="{{ route('faq') }}">
                         <article class="card faq-card h-100">
                             <img class="faq-img" src="{{ asset('img/help.png') }}" alt="" />
                             <div class="card-body">
                                 <h2>Dúvidas</h2>
                             </div>
                         </article>
-                    </div>
+                    </a>
                     <!-- Card 2 -->
-                    <div class="col-12 col-md-6 col-lg-4 cardzin" onclick="suggestions()">
+                    <a class="col-12 col-md-6 col-lg-4 cardzin" href="{{ route('suggestions') }}">
                         <article class="card faq-card h-100">
                             <img class="faq-img" src="{{ asset('img/question.png') }}" alt="" />
                             <div class="card-body">
                                 <h2>Sugestões</h2>
                             </div>
                         </article>
-                    </div>
+                    </a>
                     <!-- Card 3 -->
-                    <div class="col-12 col-md-6 col-lg-4 cardzin" onclick="talkToUs()">
+                    <a class="col-12 col-md-6 col-lg-4 cardzin" href="{{ route('talk-to-us') }}">
                         <article class="card faq-card h-100">
                             <img class="faq-img" src="{{ asset('img/phone-call.png') }}" alt="" />
                             <div class="card-body">
                                 <h2>Fale conosco</h2>
                             </div>
                         </article>
-                    </div>
+                    </a>
                 </div>
             </div>
         </section>

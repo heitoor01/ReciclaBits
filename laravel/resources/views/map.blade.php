@@ -16,7 +16,7 @@
         <nav class="navbar navbar-expand-lg bg-body-tertiary">
             <div class="container">
                 <a class="navbar-brand d-flex align-items-center gap-2" href="{{ route('home') }}">
-                    <img src="{{ asset('img/ReciclaBits.png') }}" alt="logo" class="logo" onclick="goHome()"/>
+                    <img src="{{ asset('img/ReciclaBits.png') }}" alt="logo" class="logo"/>
                     <span>ReciclaBits</span>
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"

@@ -2,6 +2,7 @@
 
 use Illuminate\Support\Facades\Route;
 
+Route::get('/busca', );
 Route::view('/', 'home')->name('home');
 Route::view('/mapa', 'map')->name('map');
 Route::view('/contato', 'contato')->name('contato');

@@ -23,10 +23,14 @@ if (searchInput) {
       }
 
       const result = fuse.search(termo);
+
+      searchInput.value = "";
+      
       if (result.length > 0) {
+        
         window.location.href = result[0].item.url;
       } else {
-        window.location.href = "/nao-encontrado";
+        window.location.href = "404";
       }
     }
   });

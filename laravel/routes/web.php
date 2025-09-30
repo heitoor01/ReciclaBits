@@ -11,4 +11,3 @@ Route::view('/cadastro', 'cadastro')->name('cadastro');
 Route::view('/recuperar-senha', 'passwordRec')->name('password.recovery');
 Route::view('/sugestoes', 'suggestions')->name('suggestions');
 Route::view('/fale-conosco', 'talkToUs')->name('talk-to-us');
-Route::view('/nao-encontrado', 'notFound')->name('not-found');

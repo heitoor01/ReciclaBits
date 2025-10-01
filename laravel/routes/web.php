@@ -2,7 +2,10 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/busca', );
+Route::get('/busca',function(){
+    return view('auth/login');
+})->name('login');
+
 Route::view('/', 'home')->name('home');
 Route::view('/mapa', 'map')->name('map');
 Route::view('/contato', 'contato')->name('contato');

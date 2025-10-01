@@ -72,10 +72,8 @@
             SUSTENTÁVEL</p>
         </div>
         <div class="search-field">
-          <form action="{{route()}}">
             <span class="material-symbols-outlined search-icon">search</span>
             <input id="search-bar" class="search-bar" type="text" placeholder="O que você procura?" autocomplete="off"/>
-          </form>
         </div>
       </div>
     </section>

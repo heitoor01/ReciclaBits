@@ -53,6 +53,9 @@ main {
 .link {
     cursor: pointer;
     min-width: 200px;
+    a {
+        text-decoration: none;
+    }
 }
 
 .link h2 {

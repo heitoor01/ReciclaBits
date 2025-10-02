@@ -39,36 +39,36 @@
             <div class="card-body p-4">
                 <h1 class="h4 mb-4 text-center">Crie sua conta</h1>
 
-                <form>
+                <form method="POST" action="{{ route('register') }}">
                     <div class="mb-3">
-                        <label for="nome" class="form-label">Nome</label>
-                        <input type="text" class="form-control" id="nome" placeholder="Digite seu nome" required>
+                        <label for="name" :value="__('Name')" class="form-label">Nome</label>
+                        <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="email" class="form-label">Endereço de email</label>
-                        <input type="email" class="form-control" id="email" placeholder="Digite seu e-mail" required>
+                        <label for="email" :value="__('Email')" class="form-label">Endereço de email</label>
+                        <input type="email" class="form-control" id="email" name="email" placeholder="Digite seu e-mail" required>
                         <div class="form-text">Nós jamais compartilharemos seu email com ninguém</div>
                     </div>
 
                     <div class="mb-3">
                         <label for="telefone" class="form-label">Telefone</label>
-                        <input type="text" class="form-control" id="telefone" placeholder="(xx) xxxxx-xxxx" required>
+                        <input type="text" class="form-control" id="telephone" name="telephone" placeholder="(xx) xxxxx-xxxx" required>
                     </div>
 
                     <div class="mb-3">
                         <label for="cpf" class="form-label">C.P.F.</label>
-                        <input type="text" class="form-control" id="cpf" placeholder="Digite seu CPF" required>
+                        <input type="text" class="form-control" id="cpf" name="cpf" placeholder="Digite seu CPF" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="senha" class="form-label">Senha</label>
-                        <input type="password" class="form-control" id="senha" placeholder="Digite sua senha" required>
+                        <label for="password" :value="__('Password')" class="form-label">Senha</label>
+                        <input type="password" class="form-control" id="password" name="password" placeholder="Digite sua senha" required>
                     </div>
 
                     <div class="mb-3">
-                        <label for="confirmaSenha" class="form-label">Confirme sua senha</label>
-                        <input type="password" class="form-control" id="confirmaSenha" placeholder="Repita sua senha"
+                        <label for="password_confirmation" :value="__('Confirm Password')" class="form-label">Confirme sua senha</label>
+                        <input type="password" class="form-control" id="password_confirmation" name="password_confirmation" placeholder="Repita sua senha"
                             required>
                     </div>
 

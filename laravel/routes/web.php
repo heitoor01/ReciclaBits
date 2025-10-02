@@ -2,9 +2,17 @@
 
 use Illuminate\Support\Facades\Route;
 
-Route::get('/busca',function(){
-    return view('auth/login');
-})->name('login');
+Route::get('/entrar',function(){
+    return redirect()->route('login');
+})->name('usuarios.entrar');
+
+Route::get('/cadastrar',function(){
+    return redirect()->route('register');
+})->name('usuarios.registrar');
+
+Route::get('/dashboard',function(){
+    return view('dashboard');
+})->name('dashboard');
 
 Route::view('/', 'home')->name('home');
 Route::view('/mapa', 'map')->name('map');
@@ -15,8 +23,3 @@ Route::view('/cadastro', 'cadastro')->name('cadastro');
 Route::view('/recuperar-senha', 'passwordRec')->name('password.recovery');
 Route::view('/sugestoes', 'suggestions')->name('suggestions');
 Route::view('/fale-conosco', 'talkToUs')->name('talk-to-us');
-
-Route::get('/login',function(){
-    return view('auth/login');
-
-})->name('login');

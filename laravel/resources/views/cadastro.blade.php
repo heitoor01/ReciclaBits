@@ -39,7 +39,7 @@
             <div class="card-body p-4">
                 <h1 class="h4 mb-4 text-center">Crie sua conta</h1>
 
-                <form method="POST" action="{{ route('register') }}">
+                <form method="POST" action="">
                     <div class="mb-3">
                         <label for="name" :value="__('Name')" class="form-label">Nome</label>
                         <input type="text" class="form-control" id="name" name="name" placeholder="Digite seu nome" required>

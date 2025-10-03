@@ -1,14 +1,20 @@
 <?php
 
 use Illuminate\Support\Facades\Route;
+use App\Http\Controllers\Auth\RegisterController;
+use resources\views\auth;
+
+Route::get ('/cu', function() {
+    return view ('contato');
+});
 
 Route::get('/entrar',function(){
-    return redirect()->route('login');
-})->name('usuarios.entrar');
+    return view ('auth/login');
+})->name('login');
 
 Route::get('/cadastrar',function(){
-    return redirect()->route('register');
-})->name('usuarios.registrar');
+    return view('auth/register');
+})->name('register');
 
 Route::get('/dashboard',function(){
     return view('dashboard');

@@ -36,20 +36,20 @@ if (searchInput) {
     });
 }
 
-const btnLogin = document.getElementById("btn-login");
-const loginBox = document.getElementById("login-box");
+// const btnLogin = document.getElementById("btn-login");
+// const loginBox = document.getElementById("login-box");
 
-if (btnLogin && loginBox) {
-    btnLogin.addEventListener("click", () => {
-        loginBox.classList.toggle("show");
-    });
+// if (btnLogin && loginBox) {
+//     btnLogin.addEventListener("click", () => {
+//         loginBox.classList.toggle("show");
+//     });
 
-    // Fecha se clicar fora
-    document.addEventListener("click", (e) => {
-        if (!loginBox.contains(e.target) && !btnLogin.contains(e.target)) {
-            loginBox.classList.remove("show");
-        }
-    });
-}
+//     // Fecha se clicar fora
+//     document.addEventListener("click", (e) => {
+//         if (!loginBox.contains(e.target) && !btnLogin.contains(e.target)) {
+//             loginBox.classList.remove("show");
+//         }
+//     });
+// }
 
 

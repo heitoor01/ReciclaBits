@@ -37,26 +37,9 @@
             <li class="nav-item"><a class="nav-link" href="{{ route('sobre-nos') }}">Sobre nós</a></li>
             <!-- Botão de Login -->
             <li class="nav-item">
-              <button id="btn-login" class="btn btn-success ms-3" href="{{ route('contato') }}/cu">Login</button>
+              <a id="btn-login" class="btn btn-success ms-3" href="{{ route('login') }}">Login</a>
             </li>
           </ul>
-          <!-- Caixa de login -->
-          <div id="login-box" class="login-box shadow">
-            <form method="POST" action="">
-              <div class="mb-3">
-                <label for="email" class="form-label">E-mail</label>
-                <input type="email" id="email" class="form-control" placeholder="Digite seu e-mail" required>
-              </div>
-              <div class="mb-3">
-                <label for="senha" class="form-label">Senha</label>
-                <input type="password" id="senha" class="form-control" placeholder="Digite sua senha" required>
-              </div>
-              <a href="{{ route('password.recovery') }}" class="small d-block mb-2">Esqueceu sua senha?</a>
-              <button type="submit" class="btn btn-success w-100">Entrar</button>
-              <p class="mt-3 text-center small">Não tem cadastro?</p>
-              <a class="btn btn-primary w-100" href="">Cadastre-se</a>
-            </form>
-          </div>
         </div>
       </div>
     </nav>

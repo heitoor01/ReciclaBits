@@ -4,6 +4,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\Auth\RegisterController;
 use resources\views\auth;
 use App\Http\Controllers\userController;
+use App\Http\Controllers\ProfileController;
+
 
 // Route::get('/entrar',function(){
 //     return view ('auth/login');
@@ -17,9 +19,11 @@ Route::get('/dashboard',function(){
     return view('dashboard');
 })->name('dashboard');
 
-Route::get('/perfil', function(){
- return redirect()->route('home');
-})->name('profile.edit');
+Route::middleware(['auth'])->group(function () {
+    Route::get('/perfil', [ProfileController::class, 'edit'])->name('profile.edit');
+    Route::patch('/perfil', [ProfileController::class, 'update'])->name('profile.update');
+    Route::delete('/perfil', [ProfileController::class, 'destroy'])->name('profile.destroy');
+});
 
 
 Route::view('/', 'home')->name('home');

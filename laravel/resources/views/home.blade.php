@@ -8,11 +8,13 @@
   <link rel="stylesheet" href="{{ asset('css/style.css') }}">
 
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
 
   <script src="https://cdn.jsdelivr.net/npm/fuse.js/dist/fuse.min.js"></script>
   <!-- Google Icons (lupa) -->
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
+  <link rel="stylesheet"
+    href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200&icon_names=search" />
 
 </head>
 
@@ -42,7 +44,22 @@
           </ul>
         </div>
       </div>
+      @auth
+      <a href="{{ route('dashboard') }}" class="font-semibold text-blue-600">Dashboard</a>
+      <form method="POST" action="{{ route('logout') }}" class="inline">
+      @csrf
+      <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
+        Sair
+      </button>
+      </form>
+    @else
+      <a href="{{ route('login') }}" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
+      Login
+      </a>
+    @endauth
+
     </nav>
+
   </header>
 
   <main>
@@ -51,12 +68,13 @@
       <div class="hero">
         <img src="{{ asset('img/Hero.png') }}" alt="Lixeira e reciclagem" />
         <div class="apresentacao">
-          <p class="titulo">EMPRESA CRIADA COM A IDEIA DE CONECTAR EMPRESA E COMUNIDADE EM BUSCA DE UMA CIDADE MAIS
+          <p class="titulo" style="font-size: 60px;">EMPRESA CRIADA COM A IDEIA DE CONECTAR EMPRESA E COMUNIDADE EM
+            BUSCA DE UMA CIDADE MAIS
             SUSTENTÁVEL</p>
         </div>
         <div class="search-field">
-            <span class="material-symbols-outlined search-icon">search</span>
-            <input id="search-bar" class="search-bar" type="text" placeholder="O que você procura?" autocomplete="off"/>
+          <span class="material-symbols-outlined search-icon">search</span>
+          <input id="search-bar" class="search-bar" type="text" placeholder="O que você procura?" autocomplete="off" />
         </div>
       </div>
     </section>
@@ -100,7 +118,7 @@
           <!-- Card 3 -->
           <div class="col-12 col-md-6 col-lg-4">
             <article class="card recicla-card h-100">
-              <img class="recicla-img" src="{{ asset ('img/Educacao.png') }}" alt="Educação ambiental" />
+              <img class="recicla-img" src="{{ asset('img/Educacao.png') }}" alt="Educação ambiental" />
               <div class="card-body">
                 <h2>Educação Ambiental</h2>
                 <p>
@@ -143,7 +161,9 @@
   </footer>
 
   <!-- Bootstrap JS -->
-  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+  <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
 
   <script src="{{ asset('js/script.js') }}"></script>
 

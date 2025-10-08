@@ -1,3 +1,8 @@
+    <style>
+        img.logo{
+            width: 120px;
+        }
+    </style>
 <section class="space-y-6">
     <header>
         <h2 class="text-lg font-medium text-gray-900">
@@ -8,6 +13,7 @@
             {{ __('Uma vez que sua conta for excluída, todos os seus dados e recursos serão permanentemente apagados. Antes de excluir sua conta, baixe quaisquer informações que deseje manter.') }}
         </p>
     </header>
+
 
     <x-danger-button
         x-data=""

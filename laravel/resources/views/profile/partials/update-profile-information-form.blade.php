@@ -22,14 +22,22 @@
             <x-text-input id="name" name="name" type="text" class="mt-1 block w-full" :value="old('name', $user->name)" required autofocus autocomplete="name" />
             <x-input-error class="mt-2" :messages="$errors->get('name')" />
         </div>
+        
+        <div>
+            <x-input-label for="telephone" :value="__('Telefone')" />
+            <x-text-input id="telephone" name="telephone" type="text" class="mt-1 block w-full" :value="old('telephone', $user->telephone)" required autofocus autocomplete="telephone" />
+            <x-input-error class="mt-2" :messages="$errors->get('telephone')" />
+        </div>
 
         <div>
             <x-input-label for="email" :value="__('E-mail')" />
             <x-text-input id="email" name="email" type="email" class="mt-1 block w-full" :value="old('email', $user->email)" required autocomplete="username" />
             <x-input-error class="mt-2" :messages="$errors->get('email')" />
 
+
             @if ($user instanceof \Illuminate\Contracts\Auth\MustVerifyEmail && ! $user->hasVerifiedEmail())
                 <div>
+        
                     <p class="text-sm mt-2 text-gray-800">
                         {{ __('Seu endereço de e-mail ainda não foi verificado.') }}
 

@@ -104,10 +104,11 @@ body {
   font-size: clamp(1rem, 2.5vw, 1.5rem);
   letter-spacing: .5px;
   width: 70%;
+  
 }
 
 /* SEARCH */
-.search-field {
+/* .search-field {
   position: absolute;
   left: 50%;
   bottom: clamp(8px, 4vw, -28px);
@@ -136,7 +137,7 @@ body {
   font-variation-settings: 'FILL' 0, 'wght' 500;
   font-size: 22px;
   color: var(--muted);
-}
+} */
 
 /* SECTION: INFO */
 .info {
@@ -194,9 +195,6 @@ footer a:hover {
     inset: auto 0 34%;
   }
 
-  .search-field {
-    border-radius: 14px;
-  }
 
   .logo {
     width: 90px;

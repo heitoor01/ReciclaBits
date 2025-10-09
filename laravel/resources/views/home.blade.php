@@ -37,27 +37,40 @@
             <li class="nav-item"><a class="nav-link" href="{{ route('map') }}">Mapa</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ route('contato') }}">Contato</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ route('sobre-nos') }}">Sobre nós</a></li>
+
+            @auth
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          {{ Auth::user()->name }}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a></li>
+          <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Perfil</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit" class="dropdown-item text-danger">Sair</button>
+            </form>
+          </li>
+          </ul>
+        </li>
+      @else
+        <li class="nav-item">
+          <a id="btn-login" class="btn btn-success ms-3" href="{{ route('login') }}">Login</a>
+        </li>
+      @endauth
             <!-- Botão de Login -->
+            <!-- 
             <li class="nav-item">
               <a id="btn-login" class="btn btn-success ms-3" href="{{ route('login') }}">Login</a>
-            </li>
+            </li> -->
           </ul>
         </div>
       </div>
-      @auth
-      <a href="{{ route('dashboard') }}" class="font-semibold text-blue-600">Dashboard</a>
-      <form method="POST" action="{{ route('logout') }}" class="inline">
-      @csrf
-      <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
-        Sair
-      </button>
-      </form>
-    @else
-      <a href="{{ route('login') }}" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded-lg">
-      Login
-      </a>
-    @endauth
-
     </nav>
 
   </header>
@@ -68,14 +81,14 @@
       <div class="hero">
         <img src="{{ asset('img/Hero.png') }}" alt="Lixeira e reciclagem" />
         <div class="apresentacao">
-          <p class="titulo" style="font-size: 60px;">EMPRESA CRIADA COM A IDEIA DE CONECTAR EMPRESA E COMUNIDADE EM
+          <p class="titulo" style="margin: 0">EMPRESA CRIADA COM A IDEIA DE CONECTAR EMPRESA E COMUNIDADE EM
             BUSCA DE UMA CIDADE MAIS
             SUSTENTÁVEL</p>
         </div>
-        <div class="search-field">
+        <!-- <div class="search-field">
           <span class="material-symbols-outlined search-icon">search</span>
           <input id="search-bar" class="search-bar" type="text" placeholder="O que você procura?" autocomplete="off" />
-        </div>
+        </div> -->
       </div>
     </section>
 
@@ -108,9 +121,9 @@
                 <h2>Você pode ganhar reciclando</h2>
                 <p>
                   Nosso programa de recompensa valoriza quem faz o descarte correto do lixo eletrônico em nossas
-                  coletoras parceiras. Cada entrega consciente gera pontos que podem ser trocados por descontos e
+                  coletoras parceiras. Cada entrega gera pontos que podem ser trocados por descontos e
                   benefícios exclusivos. Dessa forma, incentivamos a comunidade a dar o destino certo aos resíduos,
-                  reduzindo impactos ambientais e fortalecendo a cultura da sustentabilidade.
+                  reduzindo impactos ambientais.
                 </p>
               </div>
             </article>

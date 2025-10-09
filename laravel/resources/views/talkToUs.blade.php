@@ -7,7 +7,8 @@
   <title>Contato</title>
   <link rel="stylesheet" href="{{ asset('css/contato.css') }}">
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -28,6 +29,31 @@
             <li class="nav-item"><a class="nav-link" href="{{ route('map') }}">Mapa</a></li>
             <li class="nav-item"><a class="nav-link active" href="{{ route('contato') }}">Contato</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ route('sobre-nos') }}">Sobre nós</a></li>
+            @auth
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          {{ Auth::user()->name }}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a></li>
+          <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Perfil</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit" class="dropdown-item text-danger">Sair</button>
+            </form>
+          </li>
+          </ul>
+        </li>
+      @else
+        <li class="nav-item">
+          <a id="btn-login" class="btn btn-success ms-3" href="{{ route('login') }}">Login</a>
+        </li>
+      @endauth
           </ul>
         </div>
       </div>
@@ -47,10 +73,10 @@
           <div class="card shadow-sm h-100">
             <div class="card-body">
               <h2 class="h5 mb-3">Informações</h2>
-              <p><strong>Endereço:</strong> Rua Exemplo, 123 – Santo André, SP</p>
-              <p><strong>Telefone:</strong> (11) 99999-9999</p>
+              <p><strong>Endereço:</strong> Rua Marechal Deodoro, 123 - São Bernardo do Campo, SP</p>
+              <p><strong>Telefone:</strong> (11) 97123-9453</p>
               <p><strong>Email:</strong> <a href="mailto:reciclabits@gmail.com">reciclabits@gmail.com</a></p>
-              <p><strong>Horário de atendimento:</strong> Seg – Sex, 9h às 17h</p>
+              <p><strong>Horário de atendimento:</strong> Seg - Sex, 9h às 17h</p>
             </div>
           </div>
         </div>
@@ -71,8 +97,7 @@
                 </div>
                 <div class="mb-3">
                   <label for="mensagem" class="form-label">Mensagem</label>
-                  <textarea id="mensagem" rows="4" class="form-control"
-                    placeholder="Escreva sua mensagem"></textarea>
+                  <textarea id="mensagem" rows="4" class="form-control" placeholder="Escreva sua mensagem"></textarea>
                 </div>
                 <button type="submit" class="btn btn-success w-100">Enviar</button>
               </form>
@@ -106,5 +131,7 @@
   </footer>
 </body>
 
-<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+
 </html>

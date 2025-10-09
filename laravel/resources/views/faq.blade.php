@@ -26,10 +26,36 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('map') }}">Mapa</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('contato') }}">Contato</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('sobre-nos') }}">Sobre nós</a></li>
+                        @auth
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ Auth::user()->name }}
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li><a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Perfil</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button type="submit" class="dropdown-item text-danger">Sair</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a id="btn-login" class="btn btn-success ms-3" href="{{ route('login') }}">Login</a>
+                            </li>
+                        @endauth
                     </ul>
                 </div>
             </div>
@@ -101,7 +127,8 @@
             <div class="faq-item">
                 <div class="faq-question">Como entro em contato em caso de dúvidas?</div>
                 <div class="faq-answer">
-                    Você pode enviar um e-mail para reciclabits@gmail.com ou acessar a área de contato disponível no site.
+                    Você pode enviar um e-mail para reciclabits@gmail.com ou acessar a área de contato disponível no
+                    site.
                 </div>
             </div>
         </div>
@@ -131,7 +158,9 @@
 
 </body>
 
-<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+    crossorigin="anonymous"></script>
 
 <script src="{{ asset('js/contato.js') }}"></script>
 

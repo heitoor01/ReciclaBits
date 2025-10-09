@@ -8,7 +8,8 @@
     <link rel="stylesheet" href="{{ asset('css/contato.css') }}">
 
     <!-- Bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
 
 </head>
 
@@ -26,10 +27,36 @@
                 </button>
                 <div class="collapse navbar-collapse" id="navbarNav">
                     <ul class="navbar-nav ms-auto">
-                        <li class="nav-item"><a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a></li>
+                        <li class="nav-item"><a class="nav-link" aria-current="page" href="{{ route('home') }}">Home</a>
+                        </li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('map') }}">Mapa</a></li>
                         <li class="nav-item"><a class="nav-link active" href="{{ route('contato') }}">Contato</a></li>
                         <li class="nav-item"><a class="nav-link" href="{{ route('sobre-nos') }}">Sobre nós</a></li>
+                        @auth
+                            <li class="nav-item dropdown">
+                                <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button"
+                                    data-bs-toggle="dropdown" aria-expanded="false">
+                                    {{ Auth::user()->name }}
+                                </a>
+                                <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+                                    <li><a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a></li>
+                                    <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Perfil</a></li>
+                                    <li>
+                                        <hr class="dropdown-divider">
+                                    </li>
+                                    <li>
+                                        <form method="POST" action="{{ route('logout') }}">
+                                            @csrf
+                                            <button type="submit" class="dropdown-item text-danger">Sair</button>
+                                        </form>
+                                    </li>
+                                </ul>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a id="btn-login" class="btn btn-success ms-3" href="{{ route('login') }}">Login</a>
+                            </li>
+                        @endauth
                     </ul>
                 </div>
             </div>
@@ -58,7 +85,7 @@
                         </article>
                     </a>
                     <!-- Card 3 -->
-                    <a class="col-12 col-md-6 col-lg-4 cardzin" href="{{ route('talk-to-us') }}">
+                    <a class="col-12 col-md-6 col-lg-4 cardzin" href="{{ route('fale-conosco') }}">
                         <article class="card faq-card h-100">
                             <img class="faq-img" src="{{ asset('img/phone-call.png') }}" alt="" />
                             <div class="card-body">
@@ -92,7 +119,9 @@
             </div>
         </div>
     </footer>
-    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+    <script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q"
+        crossorigin="anonymous"></script>
     <script src="{{ asset('js/contato.js') }}"></script>
     <script src="{{ asset('js/script.js') }}"></script>
 </body>

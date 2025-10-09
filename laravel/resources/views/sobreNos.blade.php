@@ -7,7 +7,8 @@
   <title>Sobre Nós</title>
   <link rel="stylesheet" href="{{ asset('css/sobre.css') }}">
   <!-- Bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-LN+7fdVzj6u52u30Kp6M/trliBMCMKTyK833zpbD+pXdCLuTusPj697FH4R/5mcr" crossorigin="anonymous" />
 </head>
 
 <body>
@@ -28,6 +29,31 @@
             <li class="nav-item"><a class="nav-link" href="{{ route('map') }}">Mapa</a></li>
             <li class="nav-item"><a class="nav-link" href="{{ route('contato') }}">Contato</a></li>
             <li class="nav-item"><a class="nav-link active" href="{{ route('sobre-nos') }}">Sobre nós</a></li>
+            @auth
+        <li class="nav-item dropdown">
+          <a class="nav-link dropdown-toggle" href="#" id="userDropdown" role="button" data-bs-toggle="dropdown"
+          aria-expanded="false">
+          {{ Auth::user()->name }}
+          </a>
+          <ul class="dropdown-menu dropdown-menu-end" aria-labelledby="userDropdown">
+          <li><a class="dropdown-item" href="{{ route('dashboard') }}">Dashboard</a></li>
+          <li><a class="dropdown-item" href="{{ route('profile.edit') }}">Perfil</a></li>
+          <li>
+            <hr class="dropdown-divider">
+          </li>
+          <li>
+            <form method="POST" action="{{ route('logout') }}">
+            @csrf
+            <button type="submit" class="dropdown-item text-danger">Sair</button>
+            </form>
+          </li>
+          </ul>
+        </li>
+      @else
+        <li class="nav-item">
+          <a id="btn-login" class="btn btn-success ms-3" href="{{ route('login') }}">Login</a>
+        </li>
+      @endauth
           </ul>
         </div>
       </div>
@@ -108,8 +134,8 @@
                 </ul>
 
                 <hr>
-                <p class="mb-2"><strong>Quer fazer parte?</strong></p>
-                <a href="{{ route('contato') }}" class="btn btn-success w-100">Seja parceiro(a)</a>
+                <p class="mb-2"><strong>Quer fazer parte? (Em breve)</strong></p>
+                <a href="{{ route('fale-conosco') }}" class="btn btn-success w-100">Seja parceiro(a)</a>
               </div>
             </div>
           </aside>
@@ -140,6 +166,7 @@
     </div>
   </footer>
 </body>
-<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js" integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/js/bootstrap.bundle.min.js"
+  integrity="sha384-ndDqU0Gzau9qJ1lfW4pNLlhNTkCfHzAVBReH9diLvGRem5+R9g2FzA8ZGN954O5Q" crossorigin="anonymous"></script>
 
 </html>
